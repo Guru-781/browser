@@ -72,6 +72,11 @@ jobs:
           SURFER_COMPAT: x86_64
         run: |
           npm run import -- --verbose
+          cd engine/
+          git config user.name "github-actions[bot]"
+          git config user.email "bot@benzium.io"
+          git add . || true
+          git commit -m "Force initial commit" || true
 
       - name: Bootstrap
         run: |
