@@ -134,7 +134,9 @@ jobs:
           export ZEN_CROSS_COMPILING=1
           export ZEN_RELEASE=1
           npm run package
-          mv ./dist/zen.installer.exe ./benzium-setup.exe
+          ls -la ./dist
+          mv ./dist/*.exe ./benzium-setup.exe
+
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
