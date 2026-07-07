@@ -113,7 +113,7 @@ jobs:
       - name: Package
         env:
           SURFER_COMPAT: x86_64
-          ZEN_GA_DISABLE_PGO=true
+          ZEN_GA_DISABLE_PGO: true
         run: |
           set -x
           export SURFER_PLATFORM="win32"
