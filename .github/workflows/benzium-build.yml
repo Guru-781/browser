@@ -43,6 +43,11 @@ jobs:
       - name: Load Surfer CI setup
         run: npm run surfer -- ci --brand release --display-version 1.0.0
 
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Download Firefox and dependencies
         run: npm run download
 
@@ -62,10 +67,6 @@ jobs:
           echo Setup Visual Studio
           ./mach python --virtualenv build taskcluster/scripts/misc/get_vs.py build/vs/vs2026.yaml ~/win-cross/vs2026
 
-      - name: Setup Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Import
         env:
