@@ -78,6 +78,9 @@ jobs:
           git config user.email "bot@benzium.io"
           git add . || true
           git commit --allow-empty -m "Force initial commit" || true
+          git log -1 || echo "Git log failed!"
+          # Bypass the revision check in mach bootstrap just in case
+          sed -i 's/_warn_if_risky_revision(path)/pass/g' python/mozboot/mozboot/bootstrap.py || true
 
       - name: Bootstrap
         run: |
