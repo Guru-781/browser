@@ -1,0 +1,57 @@
+{
+  "name": "Benzium Browser",
+  "vendor": "Benzium",
+  "appId": "benzium",
+  "binaryName": "benzium",
+  "version": {
+    "product": "firefox",
+    "version": "152.0.4",
+    "candidate": "152.0.4",
+    "candidateBuild": 1
+  },
+  "buildOptions": {
+    "generateBranding": true
+  },
+  "addons": {},
+  "brands": {
+    "release": {
+      "backgroundColor": "#0D0D14",
+      "brandShorterName": "Benzium",
+      "brandShortName": "Benzium",
+      "brandFullName": "Benzium Browser",
+      "release": {
+        "displayVersion": "0.1.0",
+        "github": {
+          "repo": "benzium/browser"
+        },
+        "archives": {
+          "windows": "windows.mar",
+          "macos-aarch64": "macos-aarch64.mar",
+          "linux": "linux.mar",
+          "macos-x64": "macos-x64.mar",
+          "windows-arm64": "windows-arm64.mar",
+          "linux-aarch64": "linux-aarch64.mar"
+        }
+      }
+    },
+    "beta": {
+      "backgroundColor": "#0D0D14",
+      "brandShorterName": "Benzium",
+      "brandShortName": "Benzium Beta",
+      "brandFullName": "Benzium Browser Beta",
+      "release": {
+        "displayVersion": "0.1.0b",
+        "github": {
+          "repo": "benzium/browser"
+        }
+      }
+    }
+  },
+  "license": {
+    "ignoredFiles": [
+      ".*\\.json"
+    ],
+    "licenseType": "MPL-2.0"
+  },
+  "updateHostname": "updates.benzium.io"
+}

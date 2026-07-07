@@ -1,0 +1,184 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# Benzium Browser — Privacy & Anti-Fingerprinting Preferences
+# These are applied as dynamic prefs into zen.js (engine/browser/app/profile/zen.js)
+
+# ── Tracking Protection ──────────────────────────────────────────────────────
+
+- name: privacy.trackingprotection.enabled
+  value: true
+
+- name: privacy.trackingprotection.pbmode.enabled
+  value: true
+
+- name: privacy.trackingprotection.cryptomining.enabled
+  value: true
+
+- name: privacy.trackingprotection.fingerprinting.enabled
+  value: true
+
+- name: privacy.trackingprotection.socialtracking.enabled
+  value: true
+
+- name: browser.contentblocking.category
+  value: strict
+
+- name: privacy.firstparty.isolate
+  value: true
+
+# ── Fingerprinting Protection ─────────────────────────────────────────────────
+
+- name: privacy.resistFingerprinting
+  value: false
+
+- name: privacy.resistFingerprinting.pbmode
+  value: true
+
+- name: privacy.fingerprintingProtection
+  value: true
+
+- name: privacy.fingerprintingProtection.pbmode
+  value: true
+
+- name: privacy.fingerprintingProtection.overrides
+  value: +AllTargets,-CSSPrefersColorScheme
+
+# ── Referrer Policy ───────────────────────────────────────────────────────────
+
+- name: network.http.referer.defaultPolicy
+  value: 2
+
+- name: network.http.referer.defaultPolicy.pbmode
+  value: 2
+
+# ── Telemetry & Data Collection ───────────────────────────────────────────────
+
+- name: toolkit.telemetry.enabled
+  value: false
+
+- name: toolkit.telemetry.unified
+  value: false
+
+- name: toolkit.telemetry.archive.enabled
+  value: false
+
+- name: toolkit.telemetry.newProfilePing.enabled
+  value: false
+
+- name: toolkit.telemetry.shutdownPingSender.enabled
+  value: false
+
+- name: toolkit.telemetry.updatePing.enabled
+  value: false
+
+- name: toolkit.telemetry.bhrPing.enabled
+  value: false
+
+- name: toolkit.telemetry.firstShutdownPing.enabled
+  value: false
+
+- name: datareporting.healthreport.uploadEnabled
+  value: false
+
+- name: datareporting.policy.dataSubmissionEnabled
+  value: false
+
+- name: browser.crashReports.unsubmittedCheck.autoSubmit2
+  value: false
+
+- name: browser.discovery.enabled
+  value: false
+
+# ── Safe Browsing (privacy mode — disable Google lookups) ─────────────────────
+
+- name: browser.safebrowsing.malware.enabled
+  value: false
+
+- name: browser.safebrowsing.phishing.enabled
+  value: false
+
+- name: browser.safebrowsing.downloads.enabled
+  value: false
+
+- name: browser.safebrowsing.downloads.remote.enabled
+  value: false
+
+# ── DNS & Network ─────────────────────────────────────────────────────────────
+
+- name: network.predictor.enabled
+  value: false
+
+- name: network.prefetch-next
+  value: false
+
+- name: network.http.speculative-parallel-limit
+  value: 0
+
+- name: browser.urlbar.speculativeConnect.enabled
+  value: false
+
+- name: network.dns.disablePrefetch
+  value: true
+
+- name: network.dns.disablePrefetchFromHTTPS
+  value: true
+
+# ── WebRTC ────────────────────────────────────────────────────────────────────
+
+- name: media.peerconnection.ice.default_address_only
+  value: true
+
+- name: media.peerconnection.ice.no_host
+  value: true
+
+# ── Geolocation ───────────────────────────────────────────────────────────────
+
+- name: geo.enabled
+  value: false
+
+- name: geo.wifi.uri
+  value: ""
+
+# ── Cookies & Storage ─────────────────────────────────────────────────────────
+
+- name: network.cookie.cookieBehavior
+  value: 5
+
+- name: network.cookie.thirdparty.sessionOnly
+  value: true
+
+- name: network.cookie.thirdparty.nonsecureSessionOnly
+  value: true
+
+# ── Misc Privacy ──────────────────────────────────────────────────────────────
+
+- name: browser.send_pings
+  value: false
+
+- name: dom.battery.enabled
+  value: false
+
+- name: dom.gamepad.enabled
+  value: false
+
+- name: dom.vr.enabled
+  value: false
+
+- name: beacon.enabled
+  value: false
+
+- name: device.sensors.enabled
+  value: false
+
+- name: browser.formfill.enable
+  value: false
+
+# ── Benzium Custom ────────────────────────────────────────────────────────────
+
+- name: benzium.privacy.strict-mode
+  value: true
+
+- name: benzium.privacy.version
+  value: 1
