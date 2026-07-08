@@ -8,7 +8,7 @@ jobs:
     name: Build Benzium for Windows (x64)
     runs-on: ubuntu-latest
     env:
-      SCCACHE_GHA_ENABLED: false
+      SCCACHE_GHA_ENABLED: true
       CARGO_TERM_COLOR: always
       CARGO_INCREMENTAL: 0
 
@@ -29,12 +29,23 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Cache sccache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/sccache
+            ~/.mozbuild/sccache
+          key: sccache-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            sccache-${{ runner.os }}-
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install dependencies
+
         run: |
           npm ci
           sudo apt-get update
