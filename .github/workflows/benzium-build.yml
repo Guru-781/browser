@@ -135,7 +135,8 @@ jobs:
           export ZEN_RELEASE=1
           npm run package
           ls -la ./dist
-          mv ./dist/*.exe ./benzium-setup.exe
+          mv ./dist/benzium.installer.exe ./benzium-setup.exe
+
 
 
       - name: Upload Artifact
